@@ -1,0 +1,42 @@
+/* Rejilla: columnas que se adaptan solas al ancho de la pantalla */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h2 {
+  margin: 0.6rem 0 0.3rem;
+  font-size: 1.2rem;
+}
+
+.categoria {
+  background: var(--amarillo);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pokemon {
+  color: #666666;
+  text-transform: capitalize;
+}
+
+.precio {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rojo);
+}
+
+.error {
+  color: var(--rojo);
+  font-weight: 600;
+}

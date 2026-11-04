@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== Variables globales: colores de toda la app ===== */
+:root {
+  --rojo: #e3350d;
+  --rojo-oscuro: #b32808;
+  --amarillo: #ffcb05;
+  --azul: #3b4cca;
+  --gris-claro: #f4f4f6;
+  --texto: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--gris-claro);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Contenedor centrado que usan todas las páginas */
+.pagina {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem;
+}
+
+/* Botón reutilizable */
+.boton {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: #2d3aa3;
+}

@@ -1,0 +1,16 @@
+.pie {
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  background: var(--texto);
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.pie p {
+  margin: 0.2rem 0;
+}
+
+.pie a {
+  color: var(--amarillo);
+  text-decoration: underline;
+}

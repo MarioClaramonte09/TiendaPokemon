@@ -1,0 +1,11 @@
+/* La app es una columna a pantalla completa: así el footer queda siempre abajo */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El body ocupa todo el espacio libre entre header y footer */
+.contenido {
+  flex: 1;
+}

@@ -1,0 +1,87 @@
+.cabecera {
+  position: sticky;          /* El header se queda fijo arriba al hacer scroll */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: var(--rojo);
+  color: white;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ===== MÓVIL (por defecto): botón hamburguesa visible y menú oculto ===== */
+.boton-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+/* Las 3 rayitas del botón */
+.boton-hamburguesa span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.menu {
+  display: none;             /* Oculto hasta que se pulse el botón */
+  position: absolute;
+  top: 100%;                 /* Justo debajo del header */
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--rojo-oscuro);
+}
+
+.menu.abierto {
+  display: flex;             /* Se muestra al añadir la clase "abierto" */
+}
+
+.menu a {
+  padding: 1rem 1.2rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enlace de la página en la que estamos */
+.menu a.activo {
+  background: var(--amarillo);
+  color: var(--texto);
+  font-weight: 600;
+}
+
+/* ===== ESCRITORIO (a partir de 768px): sin botón, menú en fila ===== */
+@media (min-width: 768px) {
+  .boton-hamburguesa {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 0.5rem;
+    background: none;
+  }
+
+  .menu a {
+    border-top: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+  }
+
+  .menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

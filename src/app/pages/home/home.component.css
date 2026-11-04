@@ -1,0 +1,9 @@
+.portada {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.portada h1 {
+  color: var(--rojo);
+  font-size: 2.2rem;
+}

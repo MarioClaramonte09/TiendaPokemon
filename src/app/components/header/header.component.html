@@ -1,0 +1,22 @@
+<header class="cabecera">
+  <!-- Logo: lleva a la página de inicio -->
+  <a routerLink="/" class="logo" (click)="cerrarMenu()">⚡ PokéTienda</a>
+
+  <!-- Botón hamburguesa: solo se ve en pantallas pequeñas (lo controla el CSS) -->
+  <button
+    class="boton-hamburguesa"
+    (click)="alternarMenu()"
+    aria-label="Abrir o cerrar el menú"
+    [attr.aria-expanded]="menuAbierto">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Menú de navegación. La clase "abierto" se añade solo cuando menuAbierto es true -->
+  <nav class="menu" [class.abierto]="menuAbierto">
+    <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }" (click)="cerrarMenu()">Inicio</a>
+    <a routerLink="/tienda" routerLinkActive="activo" (click)="cerrarMenu()">Tienda</a>
+    <a routerLink="/contacto" routerLinkActive="activo" (click)="cerrarMenu()">Contacto</a>
+  </nav>
+</header>
