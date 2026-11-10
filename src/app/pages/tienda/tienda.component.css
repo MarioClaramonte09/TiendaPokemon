@@ -10,6 +10,7 @@
   border-radius: 12px;
   padding: 1.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .tarjeta h2 {
@@ -18,6 +19,7 @@
 }
 
 .categoria {
+  display: inline-block;
   background: var(--amarillo);
   padding: 0.2rem 0.6rem;
   border-radius: 20px;
@@ -25,10 +27,48 @@
   font-weight: 600;
 }
 
-.pokemon {
-  color: #666666;
-  text-transform: capitalize;
+/* Imagen del Pokémon */
+.imagen {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0.6rem auto;
+  object-fit: contain;
 }
+
+/* Hueco gris mientras carga la imagen */
+.cargando-imagen {
+  background: var(--gris-claro);
+  border-radius: 12px;
+}
+
+.tipos {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.tipo {
+  padding: 0.15rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  background: #888888; /* Color por defecto si un tipo no tiene color propio */
+}
+
+/* Un color por cada tipo de Pokémon */
+.tipo-electric { background: #f7c600; color: #222222; }
+.tipo-fire     { background: #ee6b2f; }
+.tipo-water    { background: #4592c4; }
+.tipo-grass    { background: #5fb350; }
+.tipo-poison   { background: #a864c9; }
+.tipo-ghost    { background: #6b5b95; }
+.tipo-psychic  { background: #e5568a; }
+.tipo-flying   { background: #78a7e8; }
+.tipo-normal   { background: #9aa0a6; }
+.tipo-dragon   { background: #5469c4; }
 
 .precio {
   font-size: 1.3rem;
